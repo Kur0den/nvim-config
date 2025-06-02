@@ -20,3 +20,8 @@ opt.smartcase = true
 opt.shell = 'pwsh.exe'
 opt.shellcmdflag = '-noProfile -Command'
 
+-- leaderキーの設定
+vim.g.mapleader = '.'
+
+-- クリップボードの設定
+opt.clipboard = 'unnamedplus'
