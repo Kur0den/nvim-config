@@ -21,7 +21,7 @@ return {
     },
     config = function()
       -- mason.nvim の設定
-      reqire('mason').setup({
+      require('mason').setup({
         ui = {
           border = 'rounded', -- ボーダーのスタイル
           icons = {
@@ -32,7 +32,7 @@ return {
         }
       })
       -- mason-lspconfig の設定
-      mason_lspconfig.setup({
+      require("mason-lspconfig").setup({
         automatic_setup = true,
       })
 
