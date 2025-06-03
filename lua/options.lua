@@ -31,3 +31,6 @@ vim.g.mapleader = '.'
 
 -- クリップボードの設定
 opt.clipboard = 'unnamedplus'
+
+-- ボーダー
+vim.o.winborder = 'rounded'
