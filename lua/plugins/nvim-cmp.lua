@@ -4,6 +4,9 @@ return {
   {
     "neovim/nvim-lspconfig",
     dependencies = {
+      -- lsp
+      "williamboman/mason.nvim",
+      "williamboman/mason-lspconfig.nvim",
       -- 補完フレームワーク
       "hrsh7th/nvim-cmp",
       "hrsh7th/cmp-nvim-lsp",
@@ -17,12 +20,27 @@ return {
       "zbirenbaum/copilot-cmp", -- copilot
     },
     config = function()
+      -- mason.nvim の設定
+      reqire('mason').setup({
+        ui = {
+          border = 'rounded', -- ボーダーのスタイル
+          icons = {
+            package_installed = '✓',
+            package_pending = '➜',
+            package_uninstalled = '✗'
+          }
+        }
+      })
+      -- mason-lspconfig の設定
+      mason_lspconfig.setup({
+        automatic_setup = true,
+      })
+
       -- nvim-cmp の設定
       local cmp = require('cmp')
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
       -- LuaSnip をロード
       local luasnip = require('luasnip')
-
       cmp.setup({
         snippet = {
           expand = function(args)
