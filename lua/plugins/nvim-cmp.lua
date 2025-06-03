@@ -46,7 +46,10 @@ return {
           { name = 'luasnip' },
         }, {
           { name = 'buffer' },
-        })
+        }),
+        formatting = {
+          format = require('nvim-highlight-colors').format
+        }
       })
 
       cmp.setup.cmdline({ '/', '?' }, {
