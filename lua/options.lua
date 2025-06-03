@@ -5,6 +5,9 @@ local opt = vim.opt
 opt.number = true
 opt.relativenumber = true
 
+-- nowarp
+opt.wrap = false
+
 -- タブとインデントの設定
 opt.tabstop = 2
 opt.shiftwidth = 2
