@@ -6,7 +6,8 @@ return {
     options = {
       component_separators = { left = "", right = "" },
       section_separators = { left = "", right = "" },
-    }
+    },
+    extentions = {"oil", "mason", "lazy", "trouble" }
   })
   end
 }
