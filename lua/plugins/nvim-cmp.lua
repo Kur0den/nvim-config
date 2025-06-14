@@ -88,26 +88,8 @@ return {
         }),
         matching = { disallow_symbol_nonprefix_matching = false }
       })
+ 
 
-      -- nvim-lspconfig の設定
-      -- ここに各LSPサーバーの設定を記述します
-      local lspconfig = require('lspconfig')
-
-      -- 例: Lua言語のLSPサーバー (sumneko_lua)
-      -- lspconfig.sumneko_lua.setup {
-      --   capabilities = capabilities
-      -- }
-
-      -- 例: PythonのLSPサーバー (pyright)
-      -- lspconfig.pyright.setup {
-      --   capabilities = capabilities
-      -- }
-
-      -- 例: TypeScript/JavaScriptのLSPサーバー (tsserver)
-      -- lspconfig.tsserver.setup {
-      --   capabilities = capabilities
-      -- }
-      --
       -- autopairs
       local cmp_autopairs = require('nvim-autopairs.completion.cmp')
       cmp.event:on(
