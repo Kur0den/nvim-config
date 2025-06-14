@@ -20,22 +20,6 @@ return {
       "zbirenbaum/copilot-cmp", -- copilot
     },
     config = function()
-      -- mason.nvim の設定
-      require('mason').setup({
-        ui = {
-          border = 'rounded', -- ボーダーのスタイル
-          icons = {
-            package_installed = '✓',
-            package_pending = '➜',
-            package_uninstalled = '✗'
-          }
-        }
-      })
-      -- mason-lspconfig の設定
-      require("mason-lspconfig").setup({
-        automatic_setup = true,
-      })
-
       -- nvim-cmp の設定
       local cmp = require('cmp')
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -88,7 +72,6 @@ return {
         }),
         matching = { disallow_symbol_nonprefix_matching = false }
       })
- 
 
       -- autopairs
       local cmp_autopairs = require('nvim-autopairs.completion.cmp')
