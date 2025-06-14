@@ -34,3 +34,6 @@ opt.clipboard = 'unnamedplus'
 
 -- ボーダー
 vim.o.winborder = 'rounded'
+
+-- 右側に新規ウィンドウを開く
+opt.splitright = true
