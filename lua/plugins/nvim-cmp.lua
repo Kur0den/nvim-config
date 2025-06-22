@@ -2,13 +2,9 @@
 return {
   -- nvim-lspconfig
   {
-    "neovim/nvim-lspconfig",
+    "hrsh7th/nvim-cmp",
     dependencies = {
-      -- lsp
-      "mason-org/mason.nvim",
-      "mason-org/mason-lspconfig.nvim",
       -- 補完フレームワーク
-      "hrsh7th/nvim-cmp",
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-buffer", -- buffer
       "hrsh7th/cmp-path", -- path
@@ -22,7 +18,6 @@ return {
     config = function()
       -- nvim-cmp の設定
       local cmp = require('cmp')
-      local capabilities = require('cmp_nvim_lsp').default_capabilities()
       -- LuaSnip をロード
       local luasnip = require('luasnip')
       cmp.setup({
@@ -53,9 +48,13 @@ return {
         }),
         formatting = {
           format = require('nvim-highlight-colors').format
+        },
+        completion = {
+          documentation = {
+            auto_show = true,
+          }
         }
       })
-      
 
       cmp.setup.cmdline({ '/', '?' }, {
         mapping = cmp.mapping.preset.cmdline(),

@@ -16,8 +16,16 @@ return {
     dependencies = {
       "mason-org/mason.nvim",
     },
+    after = "mason.nvim",
     opts = {
       automatic_setup = true,
+      hendlers ={
+        function(server_name)
+          require("lsp-config")[server_name].setup({
+            capabilities = require('cmp_nvim_lsp').default_capabilities(),
+          })
+        end,
+      }
     }
   },
   {
