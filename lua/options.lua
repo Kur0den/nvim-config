@@ -26,9 +26,6 @@ opt.shellcmdflag = '-noProfile -Command'
 -- termguicolors
 opt.termguicolors = true
 
--- leaderキーの設定
-vim.g.mapleader = '.'
-
 -- クリップボードの設定
 opt.clipboard = 'unnamedplus'
 

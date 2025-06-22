@@ -1,3 +1,5 @@
 require("options")
 require("filetypes")
+require("keymaps")
+require("functions")
 require("config.lazy")
