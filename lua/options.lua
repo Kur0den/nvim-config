@@ -20,7 +20,13 @@ opt.ignorecase = true
 opt.smartcase = true
 
 -- shell
-opt.shell = 'pwsh.exe'
+if vim.fn.executable('fish') == 1 then
+  opt.shell = 'fish'
+elseif vim.fn.executable('pwsh') == 1 then
+  opt.shell = 'pwsh'
+else
+  opt.shell = 'powershell'
+end
 opt.shellcmdflag = '-noProfile -Command'
 
 -- termguicolors

@@ -1,0 +1,1 @@
+error: Error reading script file 'git status':
