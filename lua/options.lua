@@ -26,8 +26,8 @@ elseif vim.fn.executable('pwsh') == 1 then
   opt.shell = 'pwsh'
 else
   opt.shell = 'powershell'
+  opt.shellcmdflag = '-noProfile -Command'
 end
-opt.shellcmdflag = '-noProfile -Command'
 
 -- termguicolors
 opt.termguicolors = true
