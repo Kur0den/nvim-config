@@ -19,10 +19,17 @@ return {
     after = "mason.nvim",
     opts = {
       automatic_setup = true,
-      hendlers ={
+      handlers ={
         function(server_name)
-          require("lsp-config")[server_name].setup({
+          require("lspconfig")[server_name].setup({
             capabilities = require('cmp_nvim_lsp').default_capabilities(),
+            on_attach = function(client, bufnr)
+              if client.server_capabilities.inlayHintProvider then
+                vim.lsp.inlay_hint.enable(bufnr, true)
+              end
+            end
+
+            -- lspサーバー固有の設定
           })
         end,
       }
