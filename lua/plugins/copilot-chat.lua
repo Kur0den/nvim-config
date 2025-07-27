@@ -8,23 +8,42 @@ return {
   build = "make tiktoken", -- Only on MacOS or Linux
   opts = {
     -- See Configuration section for options
+    system_prompt = "日本語を使用して親しみやすく、明確な回答を提供してください。",
     model = "claude-3.7-sonnet",
+    show_help = "yes",
     prompts = {
-      JaDefault = {
-        system_prompt = "日本語を使用して親しみやすく、明確な回答を提供してください。",
-        Explain = "このコードが何をするか、どのように動作するかを説明してください。",
-        Review = "このコードをレビューし、改善点を提案してください。",
-        Fix = "このコードの問題を修正してください。",
-        Optimize = "このコードを最適化してください。",
-        Docs = "このコードのドキュメントコメントを生成してください。",
-        Tests = "このコードのテストケースを生成してください。",
-        Commit = "このコードの変更を説明するコミットメッセージをcommitizen conventionに沿って生成してください。",
+      Explain = {
+        prompt = "このコードが何をするか、どのように動作するかを説明してください。",
+        description = "コードの説明をお願いする"
+      },
+      Review = {
+        prompt = "このコードをレビューし、改善点を提案してください。",
+        description = "コードのレビューをお願いする"
+      },
+      Fix = {
+        prompt = "このコードの問題を修正してください。",
+        description = "コードの修正をお願いする"
+      },
+      Optimize = {
+        prompt = "このコードを最適化してください。",
+        description = "コードの最適化をお願いする"
+      },
+      Tests = {
+        prompt = "このコードのドキュメントコメントを生成してください。",
+        description = "コードのドキュメント生成をお願いする"
+      },
+      Tests = {
+        prompt = "このコードのテストケースを生成してください。",
+        description = "コードのテストケース生成をお願いする"
+      },
+      Commit = {
+        prompt = "ステージ済みの変更を説明するコミットメッセージをcommitizen conventionに沿って生成してください。",
+        description = "コミットメッセージの作成をお願いする",
+        context = "git:staged"
       }
     },
     sticky = {
-      "/JaDefault",
       "#buffer",
     }
   },
-  -- See Commands section for default commands if you want to lazy load on them
 }
