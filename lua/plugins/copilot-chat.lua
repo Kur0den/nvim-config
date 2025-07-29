@@ -37,7 +37,7 @@ return {
         description = "コードのテストケース生成をお願いする"
       },
       Commit = {
-        prompt = "ステージ済みの変更を説明するコミットメッセージをcommitizen conventionに沿って日本語で生成してください。",
+        prompt = "ステージ済みの変更を説明するコミットメッセージをConventional Commitsに沿って日本語で生成してください。",
         description = "コミットメッセージの作成をお願いする",
         context = "git:staged"
       }
