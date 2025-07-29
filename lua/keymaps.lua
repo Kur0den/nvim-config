@@ -11,3 +11,6 @@ keyset('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic 
 keyset('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
 -- 現在行の診断情報をフロートで表示
 keyset('n', '<leader>d', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
+
+-- terminal
+keyset("t", "<C-\\><C-\\>", "<C-\\><C-n>", { silent = true, desc = "Exit terminal mode" })
