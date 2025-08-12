@@ -17,4 +17,5 @@ vim.diagnostic.config({
   },
 })
 
-vim.lsp.inlay_hint.enable(true, nil)
+-- Inline hint
+vim.lsp.inlay_hint.enable(true, { 0 })
