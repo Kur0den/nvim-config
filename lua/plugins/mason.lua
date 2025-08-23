@@ -27,8 +27,32 @@ return {
               if client.server_capabilities.inlayHintProvider then
                 vim.lsp.inlay_hint.enable(bufnr, true)
               end
-            end
-
+            end,
+            settings = server_name == "ts_ls" and {
+                typescript = {
+                  inlayHints = {
+                     -- 以下の設定でインラインヒントを有効化
+                    includeInlayParameterNameHints = "literals", -- 関数の引数名ヒント
+                    includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+                    includeInlayVariableTypeHints = true,      -- 変数の型ヒント
+                    includeInlayPropertyDeclarationTypeHints = true, -- プロパティの型ヒント
+                    includeInlayFunctionParameterTypeHints = true, -- 関数の引数の型ヒント
+                    includeInlayFunctionLikeReturnTypeHints = true,  -- 関数の戻り値の型ヒント
+                    includeInlayEnumMemberValueHints = true,   -- enumメンバーの値ヒント
+                  },
+                },
+                javascript = {
+                  inlayHints = {
+                    includeInlayParameterNameHints = "literals",
+                    includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+                    includeInlayVariableTypeHints = true,
+                    includeInlayPropertyDeclarationTypeHints = true,
+                    includeInlayFunctionParameterTypeHints = true,
+                    includeInlayFunctionLikeReturnTypeHints = true,
+                    includeInlayEnumMemberValueHints = true,
+                  },
+                },
+            } or nil,
             -- lspサーバー固有の設定
           })
         end,

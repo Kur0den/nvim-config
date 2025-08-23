@@ -18,4 +18,5 @@ vim.diagnostic.config({
 })
 
 -- Inline hint
+vim.g.inlay_hints_visible = true
 vim.lsp.inlay_hint.enable(true, { 0 })
