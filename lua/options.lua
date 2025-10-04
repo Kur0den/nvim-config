@@ -40,3 +40,8 @@ vim.o.winborder = 'rounded'
 
 -- 右側に新規ウィンドウを開く
 opt.splitright = true
+-- 下に新規ウィンドウを開く
+opt.splitbelow = true
+
+-- python3 host
+vim.g.python3_host_prog=vim.fn.expand("~/.py-venv/nvim/bin/python3")
