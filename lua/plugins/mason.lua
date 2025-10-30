@@ -21,39 +21,42 @@ return {
       automatic_setup = true,
       handlers ={
         function(server_name)
+          -- vim.lsp.enable({server_name})
+          -- require("lspconfig")[server_name].setup({ capabbilities = capabilities })
           require("lspconfig")[server_name].setup({
-            capabilities = require('cmp_nvim_lsp').default_capabilities(),
+            capabilities = require('blink.cmp').get_lsp_capabilities(),
             on_attach = function(client, bufnr)
               if client.server_capabilities.inlayHintProvider then
                 vim.lsp.inlay_hint.enable(bufnr, true)
               end
             end,
-            settings = server_name == "ts_ls" and {
-                typescript = {
-                  inlayHints = {
-                     -- 以下の設定でインラインヒントを有効化
-                    includeInlayParameterNameHints = "literals", -- 関数の引数名ヒント
-                    includeInlayParameterNameHintsWhenArgumentMatchesName = false,
-                    includeInlayVariableTypeHints = true,      -- 変数の型ヒント
-                    includeInlayPropertyDeclarationTypeHints = true, -- プロパティの型ヒント
-                    includeInlayFunctionParameterTypeHints = true, -- 関数の引数の型ヒント
-                    includeInlayFunctionLikeReturnTypeHints = true,  -- 関数の戻り値の型ヒント
-                    includeInlayEnumMemberValueHints = true,   -- enumメンバーの値ヒント
-                  },
-                },
-                javascript = {
-                  inlayHints = {
-                    includeInlayParameterNameHints = "literals",
-                    includeInlayParameterNameHintsWhenArgumentMatchesName = false,
-                    includeInlayVariableTypeHints = true,
-                    includeInlayPropertyDeclarationTypeHints = true,
-                    includeInlayFunctionParameterTypeHints = true,
-                    includeInlayFunctionLikeReturnTypeHints = true,
-                    includeInlayEnumMemberValueHints = true,
-                  },
-                },
-            } or nil,
-            -- lspサーバー固有の設定
+          --   settings = server_name == "ts_ls" and {
+          --       typescript = {
+          --         inlayHints = {
+          --            -- 以下の設定でインラインヒントを有効化
+          --           includeInlayParameterNameHints = "literals", -- 関数の引数名ヒント
+          --           includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+          --           includeInlayVariableTypeHints = true,      -- 変数の型ヒント
+          --           includeInlayPropertyDeclarationTypeHints = true, -- プロパティの型ヒント
+          --           includeInlayFunctionParameterTypeHints = true, -- 関数の引数の型ヒント
+          --           includeInlayFunctionLikeReturnTypeHints = true,  -- 関数の戻り値の型ヒント
+          --           includeInlayEnumMemberValueHints = true,   -- enumメンバーの値ヒント
+          --         },
+          --       },
+          --       javascript = {
+          --         inlayHints = {
+          --           includeInlayParameterNameHints = "literals",
+          --           includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+          --           includeInlayVariableTypeHints = true,
+          --           includeInlayPropertyDeclarationTypeHints = true,
+          --           includeInlayFunctionParameterTypeHints = true,
+          --           includeInlayFunctionLikeReturnTypeHints = true,
+          --           includeInlayEnumMemberValueHints = true,
+          --         },
+          --       },
+          --   } or nil,
+          --   -- lspサーバー固有の設定
+          -- })
           })
         end,
       }
