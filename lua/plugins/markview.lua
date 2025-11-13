@@ -7,4 +7,16 @@ return {
   dependencies = {
       "saghen/blink.cmp"
   },
+  opts = {
+    preview = {
+      icon_provider = "mini",
+      enable_hybrid_mode = true,
+      modes = { "no", "c" },
+      hyblid_mode = {"n"},
+      raw_previews = {
+        markdown = {},
+        markdown_inline = {},
+      }
+    }
+  }
 };
