@@ -6,6 +6,7 @@ return {
   end,
   opts = {
     notify = true,
+    host = "0.0.0.0"
     -- add other options
   },
   config = function(_, opts)
