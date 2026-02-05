@@ -19,6 +19,19 @@ return {
     after = "mason.nvim",
     opts = {
       automatic_setup = true,
+      ensure_installed = {
+        "cssls",
+        "html",
+        -- "intelephense",
+        "lua_ls",
+        -- "prettier",
+        "remark_ls",
+        -- "selene",
+        -- "sonarlint-language-server",
+        "docker_compose_language_service",
+        "dockerls",
+        "ts_ls",
+      },
       -- handlers ={
       --   function(server_name)
       --     -- vim.lsp.enable({server_name})
@@ -60,26 +73,6 @@ return {
       --     })
       --   end,
       -- }
-    }
-  },
-  {
-   "WhoIsSethDaniel/mason-tool-installer.nvim",
-   dependencies = {
-     "mason-org/mason.nvim",
-   },
-   opts = {
-      ensure_installed = {
-        "css-lsp",
-        "html-lsp",
-        "intelephense",
-        "lua-language-server",
-        "prettier",
-        "remark-language-server",
-        "selene",
-        "sonarlint-language-server",
-        "docker-compose-language-service",
-        "dockerfile-language-server",
-      }
     }
   },
 }
