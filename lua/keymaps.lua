@@ -26,3 +26,8 @@ vim.keymap.set("n", "<localleader>rr", ":MoltenReevaluateCell<CR>",
     { silent = true, desc = "re-evaluate cell" })
 vim.keymap.set("v", "<localleader>r", ":<C-u>MoltenEvaluateVisual<CR>gv",
     { silent = true, desc = "evaluate visual selection" })
+
+-- flutter
+-- vim.keymap.set("n", "<leader>f0", require("telescope").extensions.flutter.commands, { desc = "Open command Flutter" })
+vim.keymap.set("n", "<leader>fr", ":FlutterReload<CR>", { silent = true, desc = "Flutter Reload" })
+vim.keymap.set("n", "<leader>fR", ":FlutterRestart<CR>", { silent = true, desc = "Flutter Restart" })
