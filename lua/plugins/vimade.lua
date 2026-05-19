@@ -1,6 +1,7 @@
 return {
   "TaDaa/vimade",
   opts = {
-    recipe = {"default", {animate=true}},
+    recipe = {"paradox", {animate=true}},
+    fadelevel=0.8
   }
 }
