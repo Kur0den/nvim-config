@@ -3,13 +3,6 @@ return{
   -- optional: provides snippets for the snippet source
   dependencies = {
     'rafamadriz/friendly-snippets',
-    {
-      'fang2hou/blink-copilot',
-      opts = {
-        max_completions = 3,
-        max_attempts = 3,
-      }
-      }
   },
 
   -- use a release tag to download pre-built binaries
