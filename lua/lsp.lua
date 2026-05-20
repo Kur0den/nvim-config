@@ -28,3 +28,18 @@ vim.lsp.config["ts_ls"] = {
     },
   }
 }
+vim.lsp.config["gopls"] = {
+  settings = {
+    gopls = {
+      hints = {
+        compositeLiteralFields = true,
+        compositeLiteralTypes = true,
+        constantValues = true,
+        functionTypeParameters = true,
+        ignoredError = true,
+        parameterNames = true,
+        constantValues = true,
+      }
+    }
+  }
+}

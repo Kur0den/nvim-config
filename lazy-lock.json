@@ -11,26 +11,45 @@
   "flutter-tools.nvim": { "branch": "main", "commit": "7d1acfd139215e02d2784733af69a61aaebe06e8" },
   "friendly-snippets": { "branch": "main", "commit": "6cd7280adead7f586db6fccbd15d2cac7e2188b9" },
   "fugitive-gitlab.vim": { "branch": "master", "commit": "3584cf7e607ba7822f991d407a8d780e05aae287" },
+<<<<<<< Updated upstream
   "gitsigns.nvim": { "branch": "main", "commit": "dd3f588bacbeb041be6facf1742e42097f62165d" },
   "guess-indent.nvim": { "branch": "main", "commit": "84a4987ff36798c2fc1169cbaff67960aed9776f" },
   "hlchunk.nvim": { "branch": "main", "commit": "06f51922ca43d5cdacf96725c106405fe064c59e" },
   "image.nvim": { "branch": "master", "commit": "da2be65c153ba15a14a342b05591652a6df70d58" },
+=======
+  "gitsigns.nvim": { "branch": "main", "commit": "50c205548d8b037b7ff6378fca6d21146f0b6161" },
+  "guess-indent.nvim": { "branch": "main", "commit": "84a4987ff36798c2fc1169cbaff67960aed9776f" },
+  "hlchunk.nvim": { "branch": "main", "commit": "3bc2bd7aef28fbed6643534a0fdd0f19966544bc" },
+>>>>>>> Stashed changes
   "lazy.nvim": { "branch": "main", "commit": "306a05526ada86a7b30af95c5cc81ffba93fef97" },
   "lazygit.nvim": { "branch": "main", "commit": "a04ad0dbc725134edbee3a5eea29290976695357" },
   "leaf.nvim": { "branch": "main", "commit": "847011cc5d94fab50577d93afafccba82f217b01" },
   "lnum_color.lua": { "branch": "main", "commit": "a633593137856d5c9a98d2dfd140475a801bfb1e" },
+<<<<<<< Updated upstream
   "lualine.nvim": { "branch": "master", "commit": "131a558e13f9f28b15cd235557150ccb23f89286" },
   "markview.nvim": { "branch": "main", "commit": "dbf74b6db11c1468d5128a38b26b6d99dc7316e9" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "51feb0ada33d18f3c5c71ffb46005dbf8b33bef4" },
   "mason.nvim": { "branch": "main", "commit": "e54f5bf5f12c560da31c17eee5b3e1bd369f3ff9" },
   "mini.icons": { "branch": "main", "commit": "bac6317300e205335df425296570d84322730067" },
   "mini.move": { "branch": "main", "commit": "74d140143b1bb905c3d0aebcfc2f216fd237080e" },
+=======
+  "lualine.nvim": { "branch": "master", "commit": "47f91c416daef12db467145e16bed5bbfe00add8" },
+  "markview.nvim": { "branch": "main", "commit": "1861f959599ae03cfd59f56222a542035b0cd947" },
+  "mason-lspconfig.nvim": { "branch": "main", "commit": "38499e0bda64bc0f3ec6e7f03f8e13dd11c0fa00" },
+  "mason.nvim": { "branch": "main", "commit": "44d1e90e1f66e077268191e3ee9d2ac97cc18e65" },
+  "mini.icons": { "branch": "main", "commit": "5b9076dae1bfbe47ba4a14bc8b967cde0ab5d77e" },
+  "mini.move": { "branch": "main", "commit": "b8ba0b77e91b5f0fe8e014e03f7f59799dec1d96" },
+>>>>>>> Stashed changes
   "molten-nvim": { "branch": "main", "commit": "a286aa914d9a154bc359131aab788b5a077a5a99" },
   "neovim-session-manager": { "branch": "master", "commit": "89d253a6c68af60b49570044591d5b8701866601" },
   "nvim-autopairs": { "branch": "master", "commit": "7b9923abad60b903ece7c52940e1321d39eccc79" },
   "nvim-highlight-colors": { "branch": "main", "commit": "e4c7af0211866162d999ce0bdd6a029302e19139" },
   "nvim-hlslens": { "branch": "main", "commit": "be2d7b2be01860b5445a007ff2bc72b29896db6b" },
+<<<<<<< Updated upstream
   "nvim-lspconfig": { "branch": "master", "commit": "451d4ef9abd4f0f08e379ef0d55d1c391b6125a7" },
+=======
+  "nvim-lspconfig": { "branch": "master", "commit": "97774019cb17697f35872b28bc020a72b4ca1b51" },
+>>>>>>> Stashed changes
   "nvim-notify": { "branch": "master", "commit": "8701bece920b38ea289b457f902e2ad184131a5d" },
   "nvim-scrollbar": { "branch": "main", "commit": "f8e87b96cd6362ef8579be456afee3b38fd7e2a8" },
   "nvim-treesitter": { "branch": "master", "commit": "cf12346a3414fa1b06af75c79faebe7f76df080a" },
