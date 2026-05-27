@@ -64,6 +64,9 @@ opt.splitbelow = true
 -- globalstatus
 opt.laststatus = 3
 
+-- leaderキーの設定
+vim.g.mapleader = '.' 
+
 -- python3 host
 vim.g.python3_host_prog=vim.fn.expand("~/.py-venv/nvim/bin/python3")
 

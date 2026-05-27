@@ -1,9 +1,5 @@
 local keyset = vim.keymap.set
 
-
--- leaderキーの設定
-vim.g.mapleader = '.' 
-
 -- lspにかんけいするやつ
 -- -- 次のエラーにジャンプ
 keyset('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
@@ -31,3 +27,13 @@ vim.keymap.set("v", "<localleader>r", ":<C-u>MoltenEvaluateVisual<CR>gv",
 -- vim.keymap.set("n", "<leader>f0", require("telescope").extensions.flutter.commands, { desc = "Open command Flutter" })
 vim.keymap.set("n", "<leader>fr", ":FlutterReload<CR>", { silent = true, desc = "Flutter Reload" })
 vim.keymap.set("n", "<leader>fR", ":FlutterRestart<CR>", { silent = true, desc = "Flutter Restart" })
+
+-- telescope
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
+vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+vim.keymap.set('n', '<leader>flr', builtin.lsp_references, { desc = 'Telescope LSP References' })
+vim.keymap.set('n', '<leader>fld', builtin.lsp_definitions, { desc = 'Telescope LSP Definitions' })
+vim.keymap.set('n', '<leader>flt', builtin.lsp_type_definitions, { desc = 'Telescope LSP Type definisions' })
