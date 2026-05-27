@@ -61,5 +61,9 @@ opt.splitright = true
 -- 下に新規ウィンドウを開く
 opt.splitbelow = true
 
+-- globalstatus
+opt.laststatus = 3
+
 -- python3 host
 vim.g.python3_host_prog=vim.fn.expand("~/.py-venv/nvim/bin/python3")
+
