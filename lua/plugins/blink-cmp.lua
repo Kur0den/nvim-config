@@ -36,7 +36,18 @@ return{
     },
 
     -- (Default) Only show the documentation popup when manually triggered
-    completion = { documentation = { auto_show = true } },
+    completion = {
+      documentation = { auto_show = true },
+      accept = {
+        auto_brackets = {
+          enabled = true
+        }
+      },
+      ghost_text = {
+        enabled = true,
+        show_with_menu = true
+      }
+    },
 
     cmdline = {
       keymap = {preset="super-tab"},
@@ -55,6 +66,7 @@ return{
         -- }
       }
     },
+    
 
     -- (Default) Rust fuzzy matcher for typo resistance and significantly better performance
     -- You may use a lua implementation instead by using `implementation = "lua"` or fallback to the lua implementation,
