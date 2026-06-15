@@ -1,5 +1,9 @@
 local keyset = vim.keymap.set
 
+-- nvimほんたい
+-- 検索時のハイライト削除
+keyset("n", '<Esc><Esc>', '<cmd>nohlsearch<CR>', {silent = true})
+
 -- lspにかんけいするやつ
 -- -- 次のエラーにジャンプ
 keyset('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })

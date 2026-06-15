@@ -9,15 +9,16 @@ opt.relativenumber = true
 opt.wrap = false
 
 -- タブとインデントの設定
+opt.smartindent = true
+opt.autoindent = true
+opt.expandtab = true
 opt.tabstop = 2
 opt.shiftwidth = 2
-opt.expandtab = true
-opt.autoindent = true
-opt.smartindent = true
 
 -- 検索設定
 opt.ignorecase = true
 opt.smartcase = true
+opt.hlsearch = true
 
 -- shell
 if vim.fn.executable('fish') == 1 then
@@ -33,22 +34,11 @@ end
 opt.termguicolors = true
 
 -- クリップボードの設定
-local function paste()
-  return {
-    vim.fn.split(vim.fn.getreg(""), "\n"),
-    vim.fn.getregtype(""),
-  }
-end
-
 vim.g.clipboard = {
   name = "OSC 52",
   copy = {
     ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
     ["*"] = require("vim.ui.clipboard.osc52").copy("*"),
-  },
-  paste = {
-    ["+"] = paste,
-    ["*"] = paste,
   },
 }
 opt.clipboard = 'unnamed,unnamedplus'
@@ -70,3 +60,6 @@ vim.g.mapleader = '.'
 -- python3 host
 vim.g.python3_host_prog=vim.fn.expand("~/.py-venv/nvim/bin/python3")
 
+-- scroll
+opt.scrolloff = 5
+opt.sidescrolloff = 5
