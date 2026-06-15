@@ -43,7 +43,7 @@ vim.keymap.set("n", "<localleader>RA", function()
 end, { desc = "run all cells of all languages", silent = true })
 
 -- flutter
--- vim.keymap.set("n", "<leader>f0", require("telescope").extensions.flutter.commands, { desc = "Open command Flutter" })
+vim.keymap.set("n", "<leader>f0", require("telescope").extensions.flutter.commands, { desc = "Open command Flutter" })
 vim.keymap.set("n", "<leader>fr", ":FlutterReload<CR>", { silent = true, desc = "Flutter Reload" })
 vim.keymap.set("n", "<leader>fR", ":FlutterRestart<CR>", { silent = true, desc = "Flutter Restart" })
 
