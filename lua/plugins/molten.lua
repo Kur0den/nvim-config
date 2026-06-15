@@ -14,6 +14,7 @@ return {
       -- this guide will be using image.nvim
       -- Don't forget to setup and install the plugin if you want to view image outputs
       -- vim.g.molten_image_provider = "image.nvim"
+      vim.g.molten_image_provider = "wezterm"
 
       -- optional, I like wrapping. works for virt text and the output window
       vim.g.molten_wrap_output = true
