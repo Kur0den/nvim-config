@@ -34,13 +34,6 @@ end
 opt.termguicolors = true
 
 -- クリップボードの設定
-vim.g.clipboard = {
-  name = "OSC 52",
-  copy = {
-    ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
-    ["*"] = require("vim.ui.clipboard.osc52").copy("*"),
-  },
-}
 opt.clipboard = 'unnamed,unnamedplus'
 
 -- ボーダー
